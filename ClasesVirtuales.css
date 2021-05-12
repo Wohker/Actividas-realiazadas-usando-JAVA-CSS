@@ -1,0 +1,272 @@
+/*
+En este apartado se crearan varios tipos de comnados donde se veran como se utilizan y en que 
+nos puede beneficiar al configurar los diferentes estilos con las clases CCS
+*/
+
+/*Selector universal*/
+/*    
+*{
+    border: 32px dotted 
+} */
+
+
+
+
+/*Este apartado hace que el texto se centre y se ponga en medio todo 
+aquel que empiese con p */
+p {
+    text-align: center;
+}
+
+
+/* aqui se pondra el texto al centro en los apartados de tipo h1*/
+h1 {
+    text-align: center;
+}
+
+/* aqui se pondra el texto al centro en los apartados de tipo h2*/
+h2{
+    text-align: center;
+}
+
+
+/*En este apartado el color de la letras de la parte p se ponen acua
+y el fondo se pone en color blanco */
+<style>
+    *p{
+        color:aqua;
+        background-color:white;
+    }*/ 
+</style>
+
+
+
+
+
+/* Selector de clase de un elemento en espesifico*/
+
+h2.rojo {
+    color: blueviolet;
+    border: 2px solid cyan;
+}
+
+
+/* Selector por atributo  alt 91 */ 
+
+p [clas] {
+    background-color: cyan;
+
+}
+
+
+p[lang]{
+    border: 2px solid blueviolet;
+}
+
+h2 [class~= "rojo"] {
+    border: 3px solid red;
+}
+
+
+/* Este apartado pone los links de color verde  ya que empiesa con htt*/
+ a[href^="htt"]{
+     background-color: greenyellow;
+ }
+
+
+ /*Si quieres que lo que termine se ponga de color seria ya que 
+ el .com.mx y los cambia de color */
+
+ a[href$=".com.mx"]{
+     background-color: yellow;
+
+ }
+
+
+ /* Selectores de listas  */
+ h2, p {
+     background-color: orange;
+ }
+
+
+ /*Selectores compuestos*/
+<element class-"rojo">
+selector specificty :(0,1,0)
+h2.rojo{
+    color: papayawhip;
+}
+
+
+
+/*Combinadores CSS*/
+/*selector de desendientes*/
+
+article h2{
+    background-color: tomato;
+}
+
+/*Este se le relaciona como si fuera un hermano general*/
+
+div.header ~ div {
+    background-color: yellow;
+}
+
+
+/*este selector se le coloca en los parrafos
+usando pseudo- classes al principio y le indica
+que solo ese texto se pone de la siguente manera*/
+
+p:hover{
+    background-color: red;
+}
+
+figure:hover{
+    background-color:cadetblue;
+}
+
+a:hover{
+    background-color:papayawhip ;
+}
+
+/*Esto se utliza para subrallar la primera linea de nuestro parrafo en cuestion  */
+P::first-line{
+    background-color:wheat;
+}
+
+p::first-letter{
+    font-size: 33px;
+}
+
+
+h1::first-letter{
+    font-size: 33px;
+}
+
+/* Modelo de caja*/
+
+p {
+    border: 13px blueviolet;
+    padding: 5px; 
+    margin: 0 auto;
+       
+
+}
+
+figure{
+    border: 1px  blue ;
+    padding: 5px 4px ;
+    margin: 0px;
+}
+
+
+figure {
+    text-align: center;
+}
+
+h1  {
+    border: 4px solid blue;
+    text-align: center;
+    width: 0 auto;
+    margin: 2px;
+}
+
+figure {
+    background-color:  blue;
+}
+
+h1{
+    background-color: blue;
+}
+
+img{
+    width: 800px;
+}
+
+/*En esta parte el CSS elimina los estilos encontrados por default*/
+
+header img {
+    width: 100&;
+
+}
+
+header ul {
+    list-style: none;
+}
+
+
+
+
+
+
+/* Con este comando se edita el modelo de la caja  su borde y margen */
+h1 {
+    border: 23px dashed darkorchid;
+    padding: 9px;
+    margin: 39px;
+} 
+
+
+
+/* en este apartado se editara el bloque principal*/
+main{
+   width: 63%;
+   float: right;
+}
+
+
+main ul{
+   margin-right: 5em;
+}
+main ol{
+   margin-right: 5em;
+
+
+}
+main > article img{
+   width: 180px;
+   float: right;
+   margin: .6em;
+}
+
+/* epresenta una sección de una página que consiste en contenido que está indirectamente
+ relacionado con el contenido principal del documento */
+aside{
+   width: 30%;
+   float: right;
+   padding: 0 3em;
+}
+
+/* En esta parte con el comando footer se
+puede editar el pie de pagina  */
+footer{
+   clear: both;
+   background-color: red;
+}
+
+.clearfix::after{
+    clear: both;
+    content:"" ;
+    display: table;
+
+}
+
+/*Con esto podemos editar nuestros encavezados o titulos 
+se muestra que se sentra a la izquierda y se le da el
+margen de este el espacio entre los demas objetos
+color de fondo y color de letra */
+
+header ul {
+    text-align: center;
+}
+
+header ul li  {
+    float: left;
+    width: 20%;
+}
+
+
+header a{
+    display: block;
+    margin: 0px;
+    background-color: orange;
+}
